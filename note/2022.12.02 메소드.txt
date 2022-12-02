@@ -1,0 +1,17 @@
+int 등은 지역변수인데 같은 이름을 사용 가능하다
+JVM은 무조건 main 함수만 실행한다
+
+모든 파일에서 호출가능하게 할거면 public
+내 파일에서만 호출 가능하게 하려면 private
+method는 class에만 담기 가능
+
+private, public을 쓰지 않으면 같은 패키지 내에서만 사용 가능
+static method랑 일반 method랑 나뉨
+
+
+
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main

@@ -1,0 +1,7 @@
+이클립스에 넣을 파일 압축풀기 후
+import -> Existing Projects into Workspace
+클릭 후 finish
+
+클래스 드래그 시 창모니터
+ctrl + m : 소스만 보이게
+
