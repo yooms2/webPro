@@ -11,6 +11,7 @@ public class Quiz {
 			num = scanner.nextInt() ;
 		}while(2>num || num>9) ;
 		fa(num) ;
+		scanner.close();
 	}
 	private static void fa(int s) {
 		for(int i=1 ; i<=9 ; i++) {

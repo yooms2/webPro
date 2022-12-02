@@ -8,10 +8,5 @@ method는 class에만 담기 가능
 private, public을 쓰지 않으면 같은 패키지 내에서만 사용 가능
 static method랑 일반 method랑 나뉨
 
-
-
-
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
+생성자도 메소드기 때문에 오버로딩 가능
+클래스에 속성,생성자,메소드,세터앤게터 포함
