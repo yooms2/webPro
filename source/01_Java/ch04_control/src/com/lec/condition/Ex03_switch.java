@@ -16,7 +16,7 @@ public class Ex03_switch {
 		case 5:
 			System.out.println("주사위 5");break;
 		default:
-			System.out.println("주사위 6");
+			System.out.println("주사위 6");break;
 		}
 //		if(num == 1) {
 //			System.out.println("주사위 1");

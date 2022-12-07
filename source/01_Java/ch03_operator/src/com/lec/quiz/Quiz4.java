@@ -6,12 +6,11 @@ import java.util.Scanner;
 public class Quiz4 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("나이를 입력하세요 ? ");
+		System.out.println("나이를 입력하세요_");
 		int x = scanner.nextInt();
-		int i = 65;
 				
-		String result = (x >= i)? "경로우대" : "일반" ;
-		System.out.println("나이가 65세이상인지 확인 : " + result);
+		String result = (x >= 65)? "경로우대" : "일반" ;
+		System.out.println("(65세이상 : 경로우대, 65세 미만 : 일반)\n " + result);
 		scanner.close();
 	}
 }

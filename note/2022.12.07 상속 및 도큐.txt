@@ -1,0 +1,4 @@
+final은 class앞에도 가능
+class앞에 static은 불가
+오라클사가 제공한 소스 확인 가능
+ctrl + click => exto file -java-jdk-src

@@ -5,8 +5,10 @@ public class Ex06 {
 		int n1 = 10;
 		n1 += 10; // n1 = n1+10
 		System.out.println("n1 = " + n1);
+		// n1 = 20;
 		n1 *= 10; // n1 = n1*10
 		System.out.println("n1 = " + n1);
+		// n1 = 200;
 		// 할당연산자는 오른쪽에서 왼쪽으로 계산
 		int n2, n3;
 		n1 = n2 = n3 = 10;

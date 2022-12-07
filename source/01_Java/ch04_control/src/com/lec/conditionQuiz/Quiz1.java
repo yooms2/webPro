@@ -1,7 +1,7 @@
 package com.lec.conditionQuiz;
 
 import java.util.Scanner;
-
+// int ~2147483647
 public class Quiz1 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

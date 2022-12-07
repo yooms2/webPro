@@ -8,7 +8,7 @@ public class Example {
 		int kor = 100;
 		int eng = 99;
 		int mat = 100;
-		int tot = kor + eng + mat; // ÃÑÁ¡
+		int tot = kor + eng + mat; // ÃÑÁ¡299
 		double avg = (double)tot / 3;
 		System.out.println("±¹¾î : "+kor+"\t¿µ¾î : "+eng+"\t¼öÇÐ : "+mat);
 		System.out.printf("ÃÑÁ¡ : %d\tÆò±Õ : %.2f\n", tot, avg);
