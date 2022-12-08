@@ -6,7 +6,7 @@ public class Quiz2 {
 		int num2 = 32;
 		int max;
 		if(num1 > num2) {
-			max= num1;
+			max = num1;
 		}else {
 			max = num2;
 		}
