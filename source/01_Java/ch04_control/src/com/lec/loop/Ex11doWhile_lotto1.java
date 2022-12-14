@@ -16,10 +16,10 @@ public class Ex11doWhile_lotto1 {
 				System.out.println("주어진 범위를 참조하세요");
 			}else if(su>lotto) {
 				max = su-1;
-				//System.out.println(su + "보다 작은 수를 도전하세요");
+				System.out.println(su + "보다 작은 수를 도전하세요");
 			}else if(su<lotto) {
 				min = su+1;
-				//System.out.println(su + "보다 큰 수를 도전하세요");
+				System.out.println(su + "보다 큰 수를 도전하세요");
 			}
 		}while(su != lotto);
 		System.out.println("축하축하 맞추셨습니다");
