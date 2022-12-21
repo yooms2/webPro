@@ -2,7 +2,7 @@ package com.lec.loopQuiz;
 
 public class Quiz2 {
 	public static void main(String[] args) {
-		int etot = 0 ;
+		int etot = 0;
 		for(int i=1 ; i<6 ; i++) {
 			System.out.print(i+i);
 			if(i != 5) {

@@ -22,8 +22,10 @@ public class Ex06_telPrint {
 				System.out.print(tel.charAt(i));
 			}
 			System.out.println();
-			System.out.println("전화번호 맨앞자리는 : " + tel.substring(0, tel.indexOf("-")));
-			System.out.println("전화번호 뒷자리는 : " + tel.substring(tel.lastIndexOf("-")+1));
+			System.out.println("전화번호 맨앞자리는 : " + tel.substring(0, tel.indexOf("-"))); // 0번째부터 첫(-) 앞까지
+			System.out.println("전화번호 뒷자리는 : " + tel.substring(tel.lastIndexOf("-")+1)); // 마지막(-)부터
 		}while(true);
+		sc.close();
+		System.out.println("BYE");
 	}
 }
