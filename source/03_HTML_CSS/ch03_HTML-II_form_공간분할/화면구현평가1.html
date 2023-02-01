@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="화면구현평가1.css" rel="stylesheet" type="text/css" />
+    <script>
+        function chk() {
+            if (frm.name.value.length < 2) {
+                alert("이름은 2글자 이상 입력하세요");
+                frm.name.focus();
+                return false;
+            } else if (frm.id.value.length < 4) {
+                alert("아이디는 4글자 이상 입력하세요");
+                frm.name.focus();
+                return false;
+            } else if (frm.pw.value.length < 1) {
+                alert("비밀번호를 1글자 이상 입력하세요");
+                frm.pw.focus();
+                return false;
+            } else if (frm.pw2.value.length < 1) {
+                alert("확인용 비밀번호를 1글자 이상 입력하세요");
+                frm.pw2.focus();
+            } else if (frm.pw.value != frm.pw2.value) {
+                alert("비밀번호가 맞지 않습니다");
+                frm.pw.value = '';
+                frm.pw2.value = '';
+                frm.pw.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1><center>회원가입</center></h1>
+    </header>
+    <content>
+        <form action="" method="get" name="frm" onsubmit="return chk()">
+            <fieldset>
+                <legend>필수입력</legend>
+                <label for="name">&nbsp;&nbsp;&nbsp;이 름<strong>*&nbsp;&nbsp;</strong></label>
+                <input type="text" name="name" id="name" placeholder="이름은 2글자 이상" required="required" /><br />
+                <label for="id">&nbsp; 아이디<strong>*&nbsp;</strong></label>
+                <input type="text" name="id" id="id" placeholder="ID는 4글자 이상" required="required" /><br />
+                <iabel for="pw">비밀번호<strong>*</strong></iabel>
+                <input type="password" name="pw" id="pw" required="required" /><br />
+                <iabel for="pw2">비번확인<strong>*</strong></iabel>
+                <input type="password" name="pw2" id="pw2" required="required" /><br />
+                <label for="tel">&nbsp;&nbsp; 전화 <strong>* &nbsp; </strong></label>
+                <input type="text" name="tel" id="tel" placeholder="xx-xxx-xxxx/000-0000-0000" pattern="\d{2,3}-?\d{3,4}-?\d{4}" title="전화번호를 형식에 맞게 입력해주세요" required="required" /><br />
+                <label for="email">&nbsp;&nbsp;이메일<strong>*&nbsp;</strong></label>
+                <input type="text" name="email" id="email" placeholder="id@domain.com또는co.kr" pattern="\D+\w+@\w+(\.\w+){1,2}" title="이메일 형식을 맞춰 입력해주세요" required="required" />
+            </fieldset>
+            <fieldset>
+                <legend>추가 입력 사항</legend>
+                결혼유무
+                <input type="radio" name="merry" value="mer" id="mer" />
+                <label for="mer">기혼</label>
+                <input type="radio" name="merry" value="sol" id="sol" />
+                <label for="sol">미혼</label>
+                <br />
+                &nbsp; &nbsp;자식 &nbsp; &nbsp;
+                <input type="checkbox" name="child" value="son" id="son" />
+                <label for="son">아들</label>
+                <input type="checkbox" name="child" value="dau" id="dau" />
+                <label for="dau">딸</label>
+                <br />
+                &nbsp; &nbsp;지역 &nbsp; &nbsp; &nbsp; &nbsp;
+                <select name="loc">
+                    <option>선택</option>
+                    <option>경기</option>
+                    <option>서울</option>
+                    <option>인천</option>
+                    <option>충청</option>
+                    <option>전라</option>
+                    <option>경상</option>
+                    <option>제주</option>
+                </select>
+            </fieldset>
+            <center>
+                <input type="submit" name="submit" value="가입" />
+                <input type="reset" name="reset" value="취소" />
+            </center>
+        </form>
+        <hr />
+    </content>
+    <footer>
+        서울시 서대문구 신촌로 141 은하빌딩 203호<br />
+        Copyright ⓒ XX All rights reserved
+    </footer>
+</body>
+</html>

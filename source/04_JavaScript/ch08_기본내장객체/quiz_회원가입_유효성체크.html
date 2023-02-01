@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table {
+            border: 2px solid #385d81;
+            height: 300px;
+        }
+        tr, td {
+            text-align: center;
+            margin: 0 10px;
+            padding: 0 10px;
+        }
+        input {
+            border: 2px solid #385d81;
+        }
+        tr:last-child input {
+            border-radius: 5px;
+            background-color: #4f81bc;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        var patternName = /[a-zA-Z가-힣]{2,}/;
+        var patternEmail = /[a-zA-z]+@[a-zA-Z]+(\.[a-zA-z]+){1,2}/;
+        var patternPw = /[a-zA-Z0-9~`!@#$%^&*()-_+=|\\\[\]{}'";:?,.\/<>]/;
+        function chk() {
+            if(!frm.name.value) {
+                alert('이름을 입력하세요');
+                frm.name.focus();
+                return false;
+            } else if(!frm.name.value.match(patternName)) {
+                alert('이름을 확인하세요');
+                frm.name.focus();
+                return false;
+            } else if(!frm.email.value) {
+                alert('이메일을 입력하세요');
+                frm.email.focus();
+                return false;
+            } else if(!frm.email.value.match(patternEmail)) {
+                alert('이메일을 확인하세요');
+                frm.email.focus();
+                return false;
+            } else if(frm.pw.value < 4) {
+                alert('소문자와 대문자, 숫자, 특수문자를 섞어서 4글자 이상의 형식으로 입력해주세요')
+                frm.pw.focus();
+                return false;
+            } else if(!frm.pw.value.match(patternPw)) {
+                alert('비민번호를 확인하세요');
+                frm.pw.focus();
+                return false;
+            } else if(frm.pwchk.value < 4) {
+                alert('소문자와 대문자, 숫자, 특수문자를 섞어서 4글자 이상의 형식으로 입력해주세요')
+                frm.pwchk.focus();
+                return false;
+            } else if(!frm.pwchk.value.match(patternPw)) {
+                alert('비밀번호를 확인하세요');
+                frm.pwchk.focus();
+                return false;
+            } else if(frm.pw.value != frm.pwchk.value) {
+                alert('비밀번호가 맞지 않습니다')
+                frm.pw.value = '';
+                frm.pwchk.value = '';
+                frm.pw.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" onsubmit="return chk()">
+        <table>
+            <tr>
+            <td>이 름</td>
+            <td><input type="text" name="name" id="name" placeholder="특수문자와 숫자 못 와"></td>
+        </tr>
+        <tr>
+            <td>메 일</td>
+            <td><input type="text" name="email" id="email" placeholder="메일형식에 맞추세요"></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="pw" id="pw"></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="pwchk" id="pwchk"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="회원가입">
+                <input type="reset" value="취소">
+                <input type="submit" value="로그인">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

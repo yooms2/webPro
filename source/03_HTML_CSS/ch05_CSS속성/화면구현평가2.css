@@ -1,0 +1,37 @@
+﻿#wrap {
+    width: 900px;
+    height: 450px;
+    margin: 0 auto;
+    border: 1px solid gray;
+}
+#header {
+    margin: 80px auto;
+    text-align: center;
+    text-decoration: underline;
+}
+#content p:nth-child(1) {
+    margin : 20px;
+    font-weight: bold;
+}
+#content p:nth-child(2) {
+    margin: 30px;
+}
+#content p:nth-child(3) {
+    margin: 20px;
+    font-weight: bold;
+    text-align: right;
+}
+#footer {
+    height: 100px;
+    line-height: 50px;
+    border-top: 1px solid gray;
+    text-align: center;
+    font-size: 1.2em;
+    box-sizing: border-box;
+}
+#footer h3 a {
+    text-decoration: none;
+}
+#footer a::after {
+    content: ' - ' attr(href);
+}

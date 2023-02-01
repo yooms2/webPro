@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            text-align: center;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        var id, openerId;
+        window.onload = function() {
+            openerId = opener.document.getElementById('id');
+            id = document.getElementsByName('id')[0];
+            // id = opener.document.getElementById('id').value;
+            id.value = openerId.value;
+        };
+        function sendData() {
+            openerId.value = id.value;
+            close();
+        }
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p>ID <input type="text" name="id"><button>체크</button></p>
+        <button onclick="sendData()">아이디사용</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var oranges = ['img/0over.jpg', 'img/1over.jpg', 'img/2over.jpg', 'img/3over.jpg'];
+        var blacks = ['img/0out.jpg', 'img/1out.jpg', 'img/2out.jpg', 'img/3out.jpg'];
+        var img;
+        window.onload = function() {
+            img = document.getElementsByTagName('img');
+        };
+        function orange(n) {
+            img[n].setAttribute('src', oranges[n]);
+        }
+        function black(n) {
+            img[n].setAttribute('src', blacks[n]);
+        }
+    </script>
+</head>
+<body>
+    <img src="img/0out.jpg" onmouseover="orange(0);" onmouseout="black(0);">
+    <img src="img/1out.jpg" onmouseover="orange(1);" onmouseout="black(1);">
+    <img src="img/2out.jpg" onmouseover="orange(2);" onmouseout="black(2);">
+    <img src="img/3out.jpg" onmouseover="orange(3);" onmouseout="black(3);">
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var img;
+        window.onload = function() {
+            img = document.getElementsByTagName('img')[0];
+        };
+        function push() {
+            img.setAttribute('src', 'img/but2.gif');
+        }
+        function pull() {
+            img.setAttribute('src', 'img/but1.gif');
+        }
+    </script>
+</head>
+<body>
+    <img src="img/but1.gif" onmousedown="push();" onmouseup="pull()">
+</body>
+</html>

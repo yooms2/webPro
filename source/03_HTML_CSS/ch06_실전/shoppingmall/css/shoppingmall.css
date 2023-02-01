@@ -1,0 +1,162 @@
+/* * * * * * * 페이지 초기화 * * * * * * */
+@font-face {
+    font-family: 'Rowdies-Regular';
+    src: url('../Rowdies-Regular.ttf'); /* css파일 기준으로 */
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rowdies-Regular';
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+li {
+    list-style: none;
+}
+/* * * * * * * header의 .gnb * * * * * * */
+.gnb {
+    width: 100%;
+    background-color: #404040;
+}
+.gnb ul {
+    width: 1000px;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.gnb ul li {
+    width: 80px;
+    float: left;
+    margin: 0 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.gnb ul li a {
+    color: white;
+    display: block;
+}
+/* * * * * * * header의 .logo * * * * * * */
+.logo {
+    width: 200px;
+    margin: 30px auto;
+    height: 100px;
+    text-align: center;
+    font-size: 2em;
+    line-height: 100px;
+    border: 1px solid gray;
+}
+/* * * * * * * header의 .hitmenu * * * * * * */
+.hitmenu ul {
+    width: 1000px;
+    margin: 0 auto 3px;
+    overflow: hidden;
+}
+.hitmenu ul li {
+    float: right;
+    border: 1px solid #777777;
+}
+.hitmenu ul li a {
+    display: block;
+    padding: 10px 30px;
+}
+.hitmenu ul li:first-child {
+    border-radius: 0 10px 10px 0;
+}
+.hitmenu ul li:last-child {
+    border-radius: 10px 0 0 10px;
+}
+/* * * * * * * header의 .lnb * * * * * * */
+.lnb {
+    /* width: 100%; */
+    border-top: 1px dashed #333333;
+    border-bottom: 1px dashed #333333;
+}
+.lnb ul {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.lnb ul li {
+    float: left;
+    width: 10%;
+    margin: 0 1.25%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+.lnb ul li a {
+    font-weight: bold;
+    display: block;
+}
+/* * * * * * * #content * * * * * * */
+#content {
+    width: 1000px;
+    margin: 0 auto;
+}
+/* * * * * * * #content의 section1 * * * * * * */
+#content .section1 {
+    overflow: hidden;
+}
+#content .section1 .slide_banner {
+    width: 700px;
+}
+#content .section1 .side_banner {
+    width: 300px;
+}
+#content .section1 > div {
+    border: 1px solid gray;
+    box-sizing: border-box;
+    float: left;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+}
+/* * * * * * * #content의 section2 * * * * * * */
+#content .section2 .hit_product {
+    margin: 10px 0;
+}
+#content .section2 .hit_product, #content .section2 .md_product {
+    border: 1px solid gray;
+}
+#content .section2 .hit_product ul, #content .section2 .md_product ul {
+    overflow: hidden;
+    /* width: 998px; */
+}
+#content .section2 .hit_product ul li, #content .section2 .md_product ul li {
+    float: left;
+    height: 400px;
+    line-height: 400px;
+    text-align: center;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    width: 240.7px;
+    margin-right: 7px;
+}
+#content .section2 .hit_product ul li:first-child, #content .section2 .md_product ul li:first-child {
+    margin-left: 7px;
+/* * * * * * * footer * * * * * * */
+}
+#footer {
+    width: 1000px;
+    margin: 5px auto;
+    height: 150px;
+    overflow: hidden;
+}
+footer div:nth-child(1), footer div:nth-child(2), footer div:nth-child(3) {
+    float: left;
+    width: 33.33%;
+    height: 100px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+footer div:last-child {
+    clear: both;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}

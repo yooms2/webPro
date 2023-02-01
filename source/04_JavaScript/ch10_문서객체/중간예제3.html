@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        table {
+            width: 500px;
+            height: 200px;
+            margin: 10px auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        var color = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple'];
+        window.onload = function() {
+            var bc = document.querySelectorAll('td');
+            for(var idx in bc) {
+                bc[idx].style = 'background-color:' + color[idx];
+            }
+        };
+        function backCol(n) {
+            var h2 = document.createElement('h2');
+            var textNode = document.createTextNode('야호 거의 끝났다');
+            h2.appendChild(textNode);
+            h2.setAttribute('class', 'message');
+            document.body.appendChild(h2);
+            h2.style.color = color[n];
+            document.body.style.backgroundColor = 'black';
+        }
+        function backWhi() {
+            var message = document.getElementsByClassName('message');
+            document.body.removeChild(message[0]);
+            document.body.style.backgroundColor = 'white';
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr onmouseout="backWhi()">
+            <td onmouseover="backCol(0)"></td>
+            <td onmouseover="backCol(1)"></td>
+            <td onmouseover="backCol(2)"></td>
+            <td onmouseover="backCol(3)"></td>
+            <td onmouseover="backCol(4)"></td>
+            <td onmouseover="backCol(5)"></td>
+            <td onmouseover="backCol(6)"></td>
+        </tr>
+    </table>
+</body>
+</html>

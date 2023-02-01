@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table { 
+            width: 500px;
+            margin: 0 auto;
+        }
+        td {
+            width: 70px;
+            height: 150px;
+            margin: 1px;
+            padding: 30px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var red = document.getElementsByClassName('red')[0];
+            red.style.cssText = 'background-color:red;'
+            var orange = document.getElementsByClassName('orange')[0];
+            orange.style.cssText = 'background-color:orange;'
+            var yellow = document.getElementsByClassName('yellow')[0];
+            yellow.style.cssText = 'background-color:yellow;'
+            var green = document.getElementsByClassName('green')[0];
+            green.style.cssText = 'background-color:green;'
+            var blue = document.getElementsByClassName('blue')[0];
+            blue.style.cssText = 'background-color:blue;'
+            var navy = document.getElementsByClassName('navy')[0];
+            navy.style.cssText = 'background-color:navy;'
+            var purple = document.getElementsByClassName('purple')[0];
+            purple.style.cssText = 'background-color:purple;'
+        };
+        var arr = ['red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple'];
+        function backCol(n) {
+            document.body.style = 'background-color : ' + arr[n];
+        }
+        function backWhi() {
+            var bw = document.querySelectorAll('body');
+            for(var idx in bw) {
+                bw[idx].style = 'background-color: white;'
+            }
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="red" onmouseover="backCol(0)" onmouseout="backWhi()"></td>
+            <td class="orange" onmouseover="backCol(1)" onmouseout="backWhi()"></td>
+            <td class="yellow" onmouseover="backCol(2)" onmouseout="backWhi()"></td>
+            <td class="green" onmouseover="backCol(3)" onmouseout="backWhi()"></td>
+            <td class="blue" onmouseover="backCol(4)" onmouseout="backWhi()"></td>
+            <td class="navy" onmouseover="backCol(5)" onmouseout="backWhi()"></td>
+            <td class="purple" onmouseover="backCol(6)" onmouseout="backWhi()"></td>
+        </tr>
+    </table>
+</body>
+</html>

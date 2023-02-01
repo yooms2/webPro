@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var id = setInterval(function() {
+            var sec = new Date().getSeconds();
+            document.write(new Date() + '<br>');
+            switch(sec%3) {
+                case 0:
+                    document.body.style.backgroundImage = 'url(ch05_img/img01.png)';
+                    document.body.style.backgroundSize = '100%';
+                    document.body.style.color = 'yellow';
+                    break;
+                case 1: 
+                    document.body.style.backgroundImage = 'url(ch05_img/img02.png)';
+                    document.body.style.backgroundSize = '100%';
+                    document.body.style.color = 'blue';
+                    break;
+                case 2:
+                    document.body.style.backgroundImage = 'url(ch05_img/img03.png)';
+                    document.body.style.backgroundSize = '100%';
+                    document.body.style.color = 'red';
+                    break;
+            }
+        }, 1000);
+        setTimeout(function(){
+            clearInterval(id);
+        }, 10000);
+        /* 힌트 : 배열 이용하면 소스가 효율적 */
+        // document.body.style = 'background-color: #ff0000';
+        // document.body.style = 'background-image: url(ch05_img/img01.png)';
+    </script>
+</head>
+<body>
+
+</body>
+</html>
