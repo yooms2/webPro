@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+
 class TOC extends Component {
     shouldComponentUpdate(newProps) { // render 실행 전 newProps(새props값), this.props(현재값)
+        console.log('shouldComponentUpdate', newProps.data, this.props.data);
         // return false; // render 실행하지 않도록
         // return true; // rnader 무조건 실행
         if(newProps.data === this.props.data) {

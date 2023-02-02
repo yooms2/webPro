@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Subject.css';
+
 class Subject extends Component {
     render() {
         console.log('subject render');
