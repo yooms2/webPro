@@ -1,13 +1,9 @@
-import React, { Component } from "react";
-
-class ReadContent extends Component{
-    render(){
-        return (
-            <article>
-                <h2>{this.props.title}</h2>
-                {this.props.desc}
-            </article>
-        );
-    }
-}
+const ReadContent = ({title, body}) => {
+    return (
+        <article>
+            <h2>{title}</h2>
+            {body}
+        </article>
+    );
+};
 export default ReadContent;

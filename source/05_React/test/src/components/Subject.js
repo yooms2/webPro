@@ -1,18 +1,15 @@
-import React, { Component } from "react"
 import './Subject.css';
-
-class Subject extends Component {
-    render(){
-        console.log('Subject render');
-        return(
-            <header>
-                <h1><a href="/" onClick={function(event) {
-                    event.preventDefault();
-                    this.props.onChangePage();
-                }.bind(this)}>{this.props.title}</a></h1>
-                {this.props.sub}
-            </header>
-        );
-    }
-}
+const Subject = props => {
+    // props.title = '수정불가. ReadOnly'; => 변경시 state화
+    return (
+        <header className="Subject">
+            <h1 onClick={() => {
+                props.onChangeMode();
+            }}>
+                {props.title}
+            </h1>
+            {props.sub}
+        </header>
+    );
+};
 export default Subject;

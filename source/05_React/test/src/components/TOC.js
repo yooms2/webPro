@@ -1,30 +1,27 @@
-import React, { Component } from "react"
-
-class TOC extends Component {
-    render(){
-        var lists = [];
-        var data = this.props.data;
-        for(var i=0 ; i<data.length ; i++) {
-            lists.push(
-                <li key={data[i].id}>
-                    <a href={data[i].id}
-                    data-id={data[i].id}
-                    onClick={function(event){
+const TOC = props => {
+    let lists = [];
+    let data = props.data;
+    for(let idx=0 ; idx<data.length ; idx++) {
+        lists.push(
+            <li key={data[idx].id}>
+                <a href={data[idx].id+'.html'}
+                    data-id={data[idx].id}
+                    id={data[idx].id}
+                    onClick={ event => {
                         event.preventDefault();
-                        this.props.onChangePage(event.target.dataset.id);
-                    }.bind(this)}>
-                        {data[i].title}
-                    </a>
-                </li>
-            );
-        }
-        return (
-            <nav>
-                <ul>
-                    {lists}
-                </ul>
-            </nav>
+                        props.onChangeMode(Number(event.target.id));
+                    }}>
+                    {data[idx].title}
+                </a>
+            </li>
         );
     }
-}
+    return (
+        <nav>
+            <ol>
+                {lists}
+            </ol>
+        </nav>
+    );
+};
 export default TOC;
