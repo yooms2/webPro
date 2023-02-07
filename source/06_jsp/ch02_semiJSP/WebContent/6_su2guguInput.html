@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		table {
+			border: 1px solid skyblue;
+		}
+		td {
+			text-align: center;
+			padding: 10px;
+		}
+	</style>
+	<script>
+		function chk() {
+			if(!frm.su1.value) {
+				alert('첫번째 수를 입력하세요');
+				su1.focus();
+				return false;
+			} else if(!frm.su2.value) {
+				alert('두번째 수를 입력하세요');
+				su2.focus();
+				return false;
+			}
+			var s1 = parseInt(frm.su1.value);
+			var s2 = parseInt(frm.su2.value);
+			if(s1 > s2) {
+				alert('작은 수 부터 입력하세요');
+				su1.focus();
+				return false;
+			}
+			return true;
+		};
+	</script>
+</head>
+<body>
+	<form action="6_su2guguout.jsp" method="get" name="frm" onsubmit="return chk()">
+		<table>
+			<tr>
+				<td>단수:</td>
+				<td>
+					<input type="number" name="su1" required="required"> 단 ~
+				</td>
+				<td>
+					<input type="number" name="su2" required="required"> 단까지
+				</td>
+			</tr>
+			<tr>
+				<td colspan='3'>
+					<input type="submit" value="구구단 출력">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
