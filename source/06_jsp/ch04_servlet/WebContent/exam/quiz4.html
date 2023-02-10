@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		body {
+			width: 600px;
+		}
+	</style>
+</head>
+<body>
+	<form action="../Quiz4" method="get">
+		<fieldset>
+			<legend>배경색 선택(GET방식)</legend>
+			빨강<input type="radio" name="col" value="red">
+			주황<input type="radio" name="col" value="orange">
+			노랑<input type="radio" name="col" value="yellow">
+			초록<input type="radio" name="col" value="green">
+			파랑<input type="radio" name="col" value="blue">
+			남색<input type="radio" name="col" value="navy">
+			보라<input type="radio" name="col" value="violet">
+			<input type="submit" value="선택확인">
+		</fieldset>
+	</form>
+	<form action="../Quiz4" method="post">
+		<fieldset>
+			<legend>배경색 선택(POST방식)</legend>
+			빨강<input type="radio" name="backcol" value="0">
+			주황<input type="radio" name="backcol" value="1">
+			노랑<input type="radio" name="backcol" value="2">
+			초록<input type="radio" name="backcol" value="3">
+			파랑<input type="radio" name="backcol" value="4">
+			남색<input type="radio" name="backcol" value="5">
+			보라<input type="radio" name="backcol" value="6">
+			<input type="submit" value="선택확인">
+		</fieldset>
+	</form>
+</body>
+</html>

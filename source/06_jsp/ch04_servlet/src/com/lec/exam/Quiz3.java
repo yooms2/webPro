@@ -1,4 +1,4 @@
-package com.lec.ex;
+package com.lec.exam;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,29 +9,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/Ex3")
-public class Ex3_gugudan extends HttpServlet {
+@WebServlet("/Quiz3")
+public class Quiz3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int numStr = Integer.parseInt(request.getParameter("num"));
-		response.setContentType("text/html; charset=UTF-8");
-			PrintWriter out = response.getWriter();
-			out.print("<html>");
-			out.print("<head>");
-			out.print("<link href=\"css/ex2.css\" rel=\"stylesheet\">");
-			out.print("</head>");
-			out.print("<body>");
-			out.print("<h2>" + numStr + "단</h2>");
-			for(int i=1 ; i<10 ; i++) {
-				out.print("<h2>" + numStr + " * " + i + "=" + (numStr*i) + "</h2>");
+		int num = Integer.parseInt(request.getParameter("num"));
+		response.setContentType("text/html; charset=utf-8");
+			int sum = 0;
+			for(int i=0 ; i<=num ; i++) {
+				sum += i;
 			}
-			out.print("</body>");
-			out.print("</html>");
+			PrintWriter out = response.getWriter();
+			out.println("<html>");
+			out.println("<head>");
+			out.println("<link href=\"css/quiz3.css\" rel=\"stylesheet\">");
+			out.println("</head>");
+			out.println("<body>");
+			out.println("<h2>" + "1부터 " + num + "까지 누적합은" + sum +"</h2>");
+			out.println("</body>");
+			out.println("</html>");
 			out.close();
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
-
 }

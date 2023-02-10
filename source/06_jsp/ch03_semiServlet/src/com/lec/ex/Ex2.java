@@ -29,7 +29,7 @@ public class Ex2 extends HttpServlet {
 			 PrintWriter out = response.getWriter(); // 스트림 생성
 			 out.print("<html>");
 			 out.print("<head>");
-			 out.print("<link href=\"css/ex2.css\" rel=\"stylesheet\">");
+			 out.print("<link href=\"../css/ex2.css\" rel=\"stylesheet\">");
 			 out.print("</head>");
 			 out.print("<body>");
 			 out.print("<h2>1부터 " + num + "까지의 누적합은 " + sum + "입니다</h2>");

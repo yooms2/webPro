@@ -1,0 +1,6 @@
+@charset "UTF-8";
+body {
+	border: 2px solid skyblue;
+	width: 400px;
+	height: 100px;
+}
