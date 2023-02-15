@@ -8,8 +8,8 @@
 	<title>Insert title here</title>
 	<style>
 		#mainForm_wrap {
-			height: 630px;
-			line-height: 630px;
+			height: 600px;
+			line-height: 600px;
 			font-size: 32px;
 			text-align: center;
 			width: 400px;
