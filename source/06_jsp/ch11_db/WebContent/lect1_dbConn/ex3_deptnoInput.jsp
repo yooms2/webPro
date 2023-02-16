@@ -39,7 +39,7 @@
 							int deptno = rs.getInt("deptno");
 							String dname = rs.getString("dname");
 							String loc = rs.getString("loc");
-							out.println("<option value='"+deptno+"'>" + deptno +  " - " + dname + " - " + loc + "</option>");
+							out.println("<option value='"+deptno+"'>" + deptno + " - " + dname + " - " + loc + "</option>");
 						}
 					} catch(Exception e) {
 						System.out.println(e.getMessage());
