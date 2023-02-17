@@ -21,16 +21,17 @@ SELECT * FROM MEMBER WHERE ID='aaa';
 INSERT INTO MEMBER 
         (ID, PW, NAME, PHONE1, PHONE2, PHONE3, GENDER, EMAIL, BIRTH, ADDRESS, RDATE)
     VALUES
-        ('aaa','111','홍길동','02','716','7777','m','hong@hong.com','1995-12-12','서울',SYSDATE);
+        ('zzz','111','지길동','02','777','7777','m','hong@hong.com','1995-12-12','서울',SYSDATE);
+COMMIT;
 
 -- 3. 로그인 : public int loginCheck(String id, String pw)
-SELECT * FROM MEMBER WHERE ID='aaa';
+SELECT ID, PW FROM MEMBER WHERE ID='aaa';
 
 -- 4. ID로 dto가져오기 : 로그인 성공시 session에 setAttribute / 회원정보 수정시 회원정보 가져오기
 --           : public MemberDto getMember(String id)
 SELECT * FROM MEMBER WHERE ID='aaa';
 
--- 회원정보수정 : public int modifyMember(MemberDto dto)
+-- 5. 회원정보수정 : public int modifyMember(MemberDto dto)
 UPDATE MEMBER SET PW='111',
                   NAME='홍길순',
                   PHONE1='031',
