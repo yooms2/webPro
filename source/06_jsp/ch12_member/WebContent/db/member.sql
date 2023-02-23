@@ -44,22 +44,3 @@ UPDATE MEMBER SET PW='111',
             WHERE ID='aaa';   
 SELECT * FROM MEMBER;
 COMMIT;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
