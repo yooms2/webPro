@@ -9,6 +9,18 @@
 	<meta charset="UTF-8">
 	<title>Insert title here</title>
 	<link href="${conPath }/css/style.css" rel="stylesheet" type="text/css">
+	<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('tr').click(function() {
+				var bid = $(this).children().eq(0).text().trim();
+				// var bid = $(this).children().first().text().trim();
+				if(!isNaN(bid)) {
+					location.href = '${conPath }/contentView.do?bid='+bid+'&pageNum=${pageNum }';
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<c:set var="SUCCESS" value="1"/>
@@ -21,7 +33,7 @@
 	</c:if>
 	
 	<c:if test="${modifyResult eq SUCCESS }">
-		<script>alert('${param.bid }번 글 수정 성공');</script>
+		<script>alert('${param_.bid }번 글 수정 성공');</script>
 	</c:if>
 	<c:if test="${modifyResult eq FAIL }">
 		<script>
@@ -65,7 +77,9 @@
 								└
 							</c:if>
 						</c:forEach> <!-- 답글 들여쓰기 처리 -->
-						<a href="${conPath }/contentView.do?bid=${dto.bid }&pageNum=${pageNum }">${dto.btitle }</a>
+						<%-- <a href="${conPath }/contentView.do?bid=${dto.bid }&pageNum=${pageNum }"> --%>
+							${dto.btitle }
+						<!-- </a> -->
 						<c:if test="${dto.bhit > 10 }">
 							<b> * </b>
 						</c:if>
