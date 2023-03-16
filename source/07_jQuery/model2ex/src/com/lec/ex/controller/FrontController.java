@@ -35,20 +35,38 @@ public class FrontController extends HttpServlet {
 		 * * * * * * * * * * * * * * * * * * * * * * * * */	
 		} else if(command.equals("/joinView.do")) {
 			viewPage = "member/join.jsp";
-		} else if(command.equals("/idConfirm.do")) {
+		} else if(command.equals("/midConfirm.do")) {
 			service = new MidConfirmService();
 			service.execute(request, response);
-			viewPage = "member/idConfirm.jsp";
-		} else if(command.equals("/emailConfirm.do")) {
+			viewPage = "member/midConfirm.jsp";
+		} else if(command.equals("/memailConfirm.do")) {
 			service = new MemailConfirmService();
 			service.execute(request, response);
-			viewPage = "member/emailConfirm.jsp";
+			viewPage = "member/memailConfirm.jsp";
 		} else if(command.equals("/join.do")) {
 			service = new JoinService();
 			service.execute(request, response);
 			viewPage = "loginView.do";
 		} else if(command.equals("/loginView.do")) {
 			viewPage = "member/login.jsp";
+		} else if(command.equals("/login.do")) {
+			service = new MLoginService();
+			service.execute(request, response);
+			viewPage = "main/main.jsp";
+		} else if(command.equals("/logout.do")) {
+			service = new MLogoutService();
+			service.execute(request, response);
+			viewPage = "main/main.jsp";
+		} else if(command.equals("/modifyView.do")) {
+			viewPage = "member/modify.jsp";
+		} else if(command.equals("/modify.do")) {
+			service = new MModifyService();
+			service.execute(request, response);
+			viewPage = "main/main.jsp";
+		} else if(command.equals("/withdrawal.do")) {
+			service = new MWithdrawalService();
+			service.execute(request, response);
+			viewPage = "main/main.jsp";
 		/* * * * * * * * * * * * * * * * * * * * * * * * *	
 		 * * * * * * * * * * admin 관련 요청 * * * * * * * * *		
 		 * * * * * * * * * * * * * * * * * * * * * * * * */	
@@ -62,10 +80,32 @@ public class FrontController extends HttpServlet {
 			service = new MAllViewService();
 			service.execute(request, response);
 			viewPage = "member/mAllView.jsp";
-		}
 		/* * * * * * * * * * * * * * * * * * * * * * * * *	
 		 * * * * * * * * 파일첨부 게시판 관련 요청 * * * * * * * *		
 		 * * * * * * * * * * * * * * * * * * * * * * * * */
+		} else if(command.equals("/boardWirteView.do")) {
+			viewPage = "fileBoard/boardWrite.jsp";
+		} else if(command.equals("/boardWrite.do")) {
+			service = new BoardWriteService();
+			service.execute(request, response);
+			viewPage = "boardList.do";
+		} else if(command.equals("/boardList.do")) {
+			service = new BoardListService();
+			service.execute(request, response);
+			viewPage = "fileBoard/boardList.jsp";
+		} else if(command.equals("/boardContent.do")) {
+			service = new BoardContentService();
+			service.execute(request, response);
+			viewPage = "fileBoard/boardContent.jsp";
+		} else if(command.equals("/boardModifyView.do")) {
+			service = new BoardModifyViewService();
+			service.execute(request, response);
+			viewPage = "fileBoard/boardModify.jsp";
+		} else if(command.equals("/boardModify.do")) {
+			service = new BoardModifyService();
+			service.execute(request, response);
+			viewPage = "boardList.do";
+		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 	}

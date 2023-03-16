@@ -11,7 +11,7 @@ public class MidConfirmService implements Service {
 		String mid = request.getParameter("mid");
 		MemberDao mDao = MemberDao.getInstance();
 		int result = mDao.midConfirm(mid);
-		if(result == mDao.EXISTENT) {
+		if(result == MemberDao.EXISTENT) {
 			request.setAttribute("midConfirmResult", "사용중인 ID입니다");
 		} else {
 			request.setAttribute("midConfirmResult", "사용 가능한 ID입니다");

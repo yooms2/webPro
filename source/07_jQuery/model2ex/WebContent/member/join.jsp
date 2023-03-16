@@ -20,11 +20,12 @@
 				$('#midConfirmResult').text('아이디는 4글자 이상 입력 시 가입이 가능합니다');
 			} else {
 				$.ajax({
-					url : '${conPath }/idConfirm.do',
+					url : '${conPath }/midConfirm.do',
 					type : 'get',
 					data : 'mid='+mid,
 					dataType : 'html',
 					success : function(data) {
+						// alert(data);
 						$('#midConfirmResult').html(data);
 					},
 				});
@@ -42,32 +43,37 @@
 		});
 		
 		var pattern = /^[a-zA-Z0-9_\.]+@[a-zA-Z0-9_]+(\.\w+){1,2}$/;
-		/* $('input[name="memail"]').keyup(function() {
+		$('input[name="memail"]').keyup(function() {
 			var memail = $(this).val();
 			if(!memail.match(pattern)) {
 				$('#memailConfirmResult').text('올바른 이메일을 입력해주세요');
 			} else {
 				$.ajax({
-					url : '${conPath }/emailConfirm.do',
+					url : '${conPath }/memailConfirm.do',
 					type : 'get',
 					data : 'memail='+memail,
 					dataType : 'html',
 					success : function(data) {
+						// alert(data);
 						$('#memailConfirmResult').html(data);
 					}
 				});
 			}
-		}); */
+		});
 		
 		$('form').submit(function() {
-			var midConfirmResult = $('#midConfirmResult').text();
+			var midConfirmResult = $('#midConfirmResult').text().trim();
 			var mpwChkResult = $('#mpwChkResult').text();
+			var memailConfirmResult = $('#memailConfirmResult').text().trim();
 			if(midConfirmResult != '사용 가능한 ID입니다') {
 				alert('사용 가능한 ID가 아닙니다');
 				return false;
 			} else if(mpwChkResult != '비밀번호 일치') {
 				alert('비밀번호가 맞지 않습니다');
-				$('#pw').focus();
+				$('#mpw').focus();
+				return false;
+			} else if(memailConfirmResult != '사용 가능한 이메일 입니다') {
+				alert('중복된 이메일 입니다')
 				return false;
 			}
 		});
@@ -98,7 +104,7 @@
 					<th>아이디</th>
 					<td>
 						<input type="text" name="mid" placeholder="4글자 이상" required="required">
-						<div id="midConfirmResult"></div>
+						<div id="midConfirmResult"> &nbsp; </div>
 					</td>
 				</tr>
 				<tr>
@@ -109,7 +115,7 @@
 					<th>비밀번호확인</th>
 					<td>
 						<input type="password" name="mpwChk" required="required">
-						<div id="mpwChkResult"></div>
+						<div id="mpwChkResult"> &nbsp; </div>
 					</td>
 				</tr>
 				<tr>
@@ -120,7 +126,7 @@
 					<th>메일</th>
 					<td>
 						<input type="text" name="memail" placeholder="이메일 형식으로 입력해주세요">
-						<div id="memailConfirmResult"></div>
+						<div id="memailConfirmResult"> &nbsp; </div>
 					</td>
 				</tr>
 				<tr>

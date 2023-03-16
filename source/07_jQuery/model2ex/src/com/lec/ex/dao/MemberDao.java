@@ -74,7 +74,7 @@ public class MemberDao {
 		Connection        conn  = null;
 		PreparedStatement pstmt = null;
 		ResultSet         rs    = null;
-		String sql = "SELECT COUNT(*) CNT FROM MVC_MEMBER WHERE MEMAIL = ?";
+		String sql = "SELECT * FROM MVC_MEMBER WHERE MEMAIL = ?";
 		try {
 			conn = getConnection();
 			pstmt = conn.prepareStatement(sql);
@@ -219,6 +219,7 @@ public class MemberDao {
 			pstmt.setString(6, member.getMaddress());
 			pstmt.setString(7, member.getMid());
 			result = pstmt.executeUpdate();
+			System.out.println(result == SUCCESS ? " 수정됨":"mid가 잘못");
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}finally {

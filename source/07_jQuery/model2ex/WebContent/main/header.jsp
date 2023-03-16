@@ -110,7 +110,7 @@
 				<li><a>${member.mname }님 &nbsp; ▶</a></li>	
 			</ul>
 		</div>
-		<div class="logo" onclick="location.href='${conPath}/list.do'">
+		<div class="logo" onclick="location.href='${conPath}/boardList.do'">
 			LOGO
 		</div>
 		<div class="lnb">
@@ -142,7 +142,7 @@
 			</ul>
 		</div>
 	</c:if>
-	<c:if test="${empty member and not empty admin}"> <%-- 관리자 모드 로그인 화면--%>
+	<c:if test="${not empty admin}"> <%-- 관리자 모드 로그인 화면--%>
 		<div class="gnb">
 			<ul>
 				<li><a href="${conPath }/boardList.do">고객센터</a></li>

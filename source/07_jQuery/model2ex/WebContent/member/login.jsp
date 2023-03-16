@@ -6,12 +6,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link href="${conPath }/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 <body>
 	<c:if test="${not empty joinResult }">
-		alert('${joinResult }');
+		<script>
+			alert('${joinResult }');
+		</script>
 	</c:if>
 	<jsp:include page="../main/header.jsp"/>
 		<div id="content_form">
@@ -27,8 +33,8 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="submit" value="로그인">
-							<input type="button" value="회원가입" onclick="location.href='${conPath }/joinView.do'">
+							<input type="submit" value="로그인" class="btn">
+							<input type="button" value="회원가입" class="btn" onclick="location.href='${conPath }/joinView.do'">
 						</td>
 					</tr>
 				</table>

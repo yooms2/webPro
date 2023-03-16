@@ -60,6 +60,7 @@ public class FileBoardDao {
 				int fstep = rs.getInt("fstep");
 				int findent = rs.getInt("findent");
 				String fip = rs.getString("fip");
+				dtos.add(new FileBoardDto(fid, mid, ftitle, fcontent, ffilename, frdate, fhit, fgroup, fstep, findent, fip));
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -115,6 +116,7 @@ public class FileBoardDao {
 			pstmt.setString(3, fcontent);
 			pstmt.setString(4, ffilename);
 			pstmt.setString(5, fip);
+			pstmt.executeUpdate();
 			result = SUCCESS;
 			System.out.println("글쓰기 성공");
 		} catch (SQLException e) {
@@ -158,7 +160,7 @@ public class FileBoardDao {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT fID, M.mID, fTITLE, fHIT, fRDATE, fIP" + 
+		String sql = "SELECT F.*, mNAME" + 
 				"    FROM MVC_MEMBER M, FILEBOARD F" + 
 				"    WHERE M.mID=F.mID" + 
 				"        AND fID = ?";
@@ -169,6 +171,7 @@ public class FileBoardDao {
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				String mid = rs.getString("mid");
+				String mname = rs.getString("mname");
 				String ftitle = rs.getString("ftitle");
 				String fcontent = rs.getString("fcontent");
 				String ffilename = rs.getString("ffilename");
@@ -193,6 +196,47 @@ public class FileBoardDao {
 		}
 		return dto;
 	}
+	// (6) 글번호(fid)로 글전체 내용(BoardDto) 가져오기 - 글수정VIEW, 답변글VIEW 용
+			public FileBoardDto modifyViewBoard_replyViewBoard(int fid) {
+			FileBoardDto dto = null;
+			Connection conn = null;
+			PreparedStatement pstmt = null;
+			ResultSet rs= null;
+			String sql = "SELECT F.*, mNAME" + 
+					"    FROM FILEBOARD F, MVC_MEMBER M" + 
+					"    WHERE F.mID=M.mID AND fID = ?";
+			try {
+				conn = getConnection();
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, fid);
+				rs = pstmt.executeQuery();
+				if(rs.next()) {
+					String mid = rs.getString("mid");
+					String mname = rs.getString("mname");
+					String ftitle = rs.getString("ftitle");
+					String fcontent = rs.getString("fcontent");
+					String ffilename = rs.getString("ffilename");
+					Date frdate = rs.getDate("frdate");
+					int fhit = rs.getInt("fhit");
+					int fgroup = rs.getInt("fgroup");
+					int fstep = rs.getInt("fstep");
+					int findent = rs.getInt("findent");
+					String fip = rs.getString("fip");
+					dto = new FileBoardDto(fid, mid, ftitle, fcontent, ffilename, frdate, fhit, fgroup, fstep, findent, fip);
+				}
+			} catch (SQLException e) {
+				System.out.println(e.getMessage());
+			} finally {
+				try {
+					if(rs!=null) rs.close();
+					if(pstmt!=null) pstmt.close();
+					if(conn!=null) conn.close();
+				} catch (SQLException e) {
+					System.out.println(e.getMessage());
+				}
+			}
+			return dto;
+		}
 	// (6) 글 수정하기(fid, ftitle, fcontent, ffilename, frdate(SYSDATE), fip 수정)
 	public int modify(int fid, String ftitle, String fcontent, String ffilename, String fip) {
 		int result = FAIL;

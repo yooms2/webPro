@@ -14,12 +14,13 @@ public class ALoginService implements Service {
 		String apw = request.getParameter("apw");
 		AdminDao aDao = AdminDao.getInstance();
 		int result = aDao.adminLogin(aid, apw);
-		if(result==aDao.SUCCESS) {
+		if(result==AdminDao.SUCCESS) {
 			HttpSession session = request.getSession();
 			AdminDto admin = aDao.getAdmin(aid);
-			session.setAttribute("admin", "관리자 계정으로 들어오셨습니다");
+			session.setAttribute("admin", admin);
+			request.setAttribute("adminResult", "관리자 계정으로 들어오셨습니다");
 		} else {
-			request.setAttribute("admin", "관리자 계정으로 로그인이 실패되었습니다");
+			request.setAttribute("adminErrorMsg", "관리자 계정으로 로그인이 실패되었습니다");
 		}
 	}
 }

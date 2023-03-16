@@ -13,7 +13,14 @@
 <body>
 	<c:if test="${not empty admin }">
 		<script>
-			alert('${admin }');
+			alert('현재 관리자 모드 입니다');
+			location.href='${conPath }/allView.do';
+		</script>
+	</c:if>
+	<c:if test="${not empty member }">
+		<script>
+			alert('접근 제한 페이지 입니다');
+			history.back();
 		</script>
 	</c:if>
 	<jsp:include page="../main/header.jsp"/>
@@ -23,11 +30,11 @@
 				<caption>관리자 로그인</caption>
 				<tr>
 					<th>ID</th>
-					<td><input type="text" name="aid"></td>
+					<td><input type="text" name="aid" required="required"></td>
 				</tr>
 				<tr>
 					<th>PW</th>
-					<td><input type="password" name="apw"></td>
+					<td><input type="password" name="apw" required="required"></td>
 				</tr>
 				<tr>
 					<td colspan="2">

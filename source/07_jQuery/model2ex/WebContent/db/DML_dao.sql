@@ -50,10 +50,17 @@ INSERT INTO FILEBOARD (fID, mID, fTITLE, fCONTENT, fFILENAME, fGROUP, fSTEP, fIN
 UPDATE FILEBOARD SET fHIT = fHIT + 1 WHERE fID = '1';
 -- (5) 글번호(fid)로 글전체 내용(BoardDto) 가져오기
 SELECT * FROM MVC_MEMBER M, FILEBOARD F WHERE fID = '1';
-SELECT fID, M.mID, fTITLE, fHIT, fRDATE, fIP
+SELECT F.*, mNAME
     FROM MVC_MEMBER M, FILEBOARD F
     WHERE M.mID=F.mID
         AND fID = '1';
+
+
+SELECT F.*, mNAME
+    FROM FILEBOARD F, MVC_MEMBER M
+    WHERE F.mID=M.mID AND fID = 1;
+
+
 -- (6) 글 수정하기(fid, ftitle, fcontent, ffilename, frdate(SYSDATE), fip 수정)
 UPDATE FILEBOARD
     SET fTITLE = '수정제목',
