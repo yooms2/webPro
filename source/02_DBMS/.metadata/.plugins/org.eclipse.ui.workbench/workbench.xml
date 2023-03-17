@@ -36,7 +36,7 @@
 </folder>
 </info>
 </editorArea>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="dept_emp.exerd" partName="dept_emp.exerd" path="C:/webPro/source/02_DBMS/newProject/dept_emp.exerd" title="dept_emp.exerd" tooltip="newProject/dept_emp.exerd" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="dept_emp.exerd" partName="dept_emp.exerd" path="C:/webPro/source/02_DBMS/newProject/dept_emp.exerd" title="dept_emp.exerd" tooltip="newProject/dept_emp.exerd" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/dept_emp.exerd"/>
 </editor>
 <editor id="com.tomato.exerd.editor.DiagramEditor" name="book.exerd" partName="book.exerd" path="C:/webPro/source/02_DBMS/newProject/book.exerd" title="book.exerd" tooltip="newProject/book.exerd" workbook="DefaultEditorWorkbook">
@@ -54,7 +54,7 @@
 <editor id="com.tomato.exerd.editor.DiagramEditor" name="person.exerd" partName="person.exerd" path="C:/webPro/source/02_DBMS/newProject/person.exerd" title="person.exerd" tooltip="newProject/person.exerd" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/person.exerd"/>
 </editor>
-<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="supermarket.exerd" partName="supermarket.exerd" path="C:/webPro/source/02_DBMS/newProject/supermarket.exerd" title="supermarket.exerd" tooltip="newProject/supermarket.exerd" workbook="DefaultEditorWorkbook">
+<editor id="com.tomato.exerd.editor.DiagramEditor" name="supermarket.exerd" partName="supermarket.exerd" path="C:/webPro/source/02_DBMS/newProject/supermarket.exerd" title="supermarket.exerd" tooltip="newProject/supermarket.exerd" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/supermarket.exerd"/>
 </editor>
 </editors>
@@ -185,13 +185,13 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/dept_emp.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/person.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/supermarket.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/person.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/shopping.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/member.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/major.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/book.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/dept_emp.exerd"/>
 </editors>
-<item historyLabel="BOOK.exerd" index="1"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
-<item historyLabel="BOOK.exerd" index="1"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
-<item historyLabel="BOOK.exerd" index="1"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
 <item historyLabel="BOOK.exerd" index="1"/>
 <item historyLabel="dept_emp.exerd" index="0"/>
 <item historyLabel="BOOK.exerd" index="1"/>
@@ -235,7 +235,13 @@
 <item historyLabel="dept_emp.exerd" index="9"/>
 <item historyLabel="shopping.exerd" index="6"/>
 <item historyLabel="person.exerd" index="10"/>
-<item active="true" historyLabel="supermarket.exerd" index="11"/>
+<item historyLabel="supermarket.exerd" index="11"/>
+<item historyLabel="person.exerd" index="12"/>
+<item historyLabel="shopping.exerd" index="13"/>
+<item historyLabel="member.exerd" index="14"/>
+<item historyLabel="major.exerd" index="15"/>
+<item historyLabel="book.exerd" index="16"/>
+<item active="true" historyLabel="dept_emp.exerd" index="17"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
