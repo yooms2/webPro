@@ -54,7 +54,7 @@
 			if(insertResult!=null && insertResult.equals("1")){
 				out.println("<script>alert('친구추가 성공');</script>");
 			}else if(insertResult!=null && insertResult.equals("0")){
-				out.println("<script>alert('친구추가 실패. 이름이나 전화번호가 너무 길면 안되요');</script>");
+				out.println("<script>alert('친구추가 실패. 이름이나 전화번호가 너무 길면 안돼요');</script>");
 			}
 		%>
 	</table>
