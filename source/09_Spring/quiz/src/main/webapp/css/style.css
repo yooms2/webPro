@@ -1,0 +1,5 @@
+@charset "UTF-8";
+body {background-color: lightyellow; width: 250px;}
+table {text-align: center;}
+p, caption {color: red; text-align: right;}
+input {width: 100px;}
