@@ -9,6 +9,8 @@
 		<result property="loc" column="loc"/>
 	</resultMap>
 	<select id="deptList" resultMap="DeptResult">
-		SELECT * FROM DEPT
+	<![CDATA[
+		SELECT * FROM DEPT 
+	]]>
 	</select>
 </mapper>
