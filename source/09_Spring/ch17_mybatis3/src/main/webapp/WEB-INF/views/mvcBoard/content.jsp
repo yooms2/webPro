@@ -24,27 +24,27 @@
 	</c:if>
 	<table>
 		<caption>상세보기</caption>
-		<tr><th>글번호</th><td>${contentBoard.bid }</td></tr>
-		<tr><th>제목</th><td>${contentBoard.btitle }</td></tr>
-		<tr><th>작성자</th><td>${contentBoard.bname }</td></tr>
-		<tr><th>본문</th><td><pre>${contentBoard.bcontent }</pre></td></tr>
+		<tr><th>글번호</th><td>${content.bid }</td></tr>
+		<tr><th>제목</th><td>${content.btitle }</td></tr>
+		<tr><th>작성자</th><td>${content.bname }</td></tr>
+		<tr><th>본문</th><td><pre>${content.bcontent }</pre></td></tr>
 		<tr>
 			<th>작성일</th>
 			<td>
-				<fmt:formatDate value="${contentBoard.bdate }" pattern="yy/MM/dd(E) HH:mm:ss:SS"/>
+				<fmt:formatDate value="${content.bdate }" pattern="yy/MM/dd(E) HH:mm:ss:SS"/>
 			</td>
 		</tr>
-		<tr><th>조회수</th><td>${contentBoard.bhit }</td></tr>
-		<tr><th>IP</th><td>${contentBoard.bip }</td></tr>
+		<tr><th>조회수</th><td>${content.bhit }</td></tr>
+		<tr><th>IP</th><td>${content.bip }</td></tr>
 		<tr>
 			<td colspan="2">
-				<button onclick="location.href='${conPath}/mvcBoard/modify.do?bid=${param.bid }&pageNum=${param.pageNum }'">
+				<button onclick="location.href='${conPath}/mvcBoard/modifyView.do?bid=${param.bid }&pageNum=${param.pageNum }'">
 					수정
 				</button>
 				<button onclick="location.href='${conPath}/mvcBoard/delete.do?bid=${param.bid }&pageNum=${param.pageNum }'">
 					삭제
 				</button>
-				<button onclick="location.href='${conPath}/mvcBoard/reply.do?bid=${param.bid}&pageNum=${param.pageNum }'">
+				<button onclick="location.href='${conPath}/mvcBoard/replyView.do?bid=${param.bid}&pageNum=${param.pageNum }'">
 					답변
 				</button>
 				<button onclick="location.href='${conPath}/mvcBoard/list.do?pageNum=${param.pageNum }'">목록</button>

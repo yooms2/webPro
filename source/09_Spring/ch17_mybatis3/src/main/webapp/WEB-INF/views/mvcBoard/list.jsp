@@ -21,7 +21,7 @@
 			}); */
 		});
 		const trClicked = function(bid) {
-			location.href = "${conPath}/mvcBoard/content.do?bid=" + bid + '&pageNum=${pageNum}';
+			location.href = "${conPath}/mvcBoard/content.do?bid=" + bid + '&pageNum=${paging.currentPage}';
 		};
 	</script>
 </head>
@@ -45,7 +45,7 @@
 		</script>
 	</c:if>
 	<c:if test="${not empty deleteResult }">
-		<script>alert('${deleteResult }');</script>
+		<script>alert('삭제 성공');</script>
 	</c:if>
 	<c:if test="${replyResult eq SUCCESS }">
 		<script>alert('${param.bid}번 글에 대한 답글쓰기 성공');</script>
@@ -59,7 +59,7 @@
 	
 	<table>
 		<caption>게시판</caption>
-		<tr><td><a href="${conPath }/mvcBoard/write.do">글쓰기</a></td></tr>
+		<tr><td><a href="${conPath }/mvcBoard/writeView.do">글쓰기</a></td></tr>
 	</table>
 	<table>
 		<tr>
@@ -71,9 +71,9 @@
 			<tr><td colspan="7">해당 페이지의 글이 없습니다</td></tr>
 		</c:if>
 		<c:if test="${totCnt != 0 }">
-			<c:set var="oNum" value="${orderNum }"/>
-			<c:set var="iNum" value="${inverseNum }"/>
-			<c:forEach var="dto" items="${boardList }">
+			<c:set var="oNum" value="${paging.orderNum }"/>
+			<c:set var="iNum" value="${paging.inverseNum }"/>
+			<c:forEach var="dto" items="${list }">
 				<tr onclick="trClicked(${dto.bid})">
 					<td>${oNum }</td>
 					<td>${iNum }</td>
@@ -104,19 +104,19 @@
 		</c:if>
 	</table>
 	<div class="paging">
-		<c:if test="${startPage > BLOCKSIZE }">
-			[ <a href="${conPath }/mvcBoard/list.do?pageNum=${startPage-1}">이전</a> ]
+		<c:if test="${paging.startPage > paging.blockSize }">
+			[ <a href="${conPath }/mvcBoard/list.do?pageNum=${paging.startPage-1}">이전</a> ]
 		</c:if>
-		<c:forEach var="i" begin="${startPage }" end="${endPage }">
-			<c:if test="${i eq pageNum }">
+		<c:forEach var="i" begin="${paging.startPage }" end="${paging.endPage }">
+			<c:if test="${i eq paging.currentPage }">
 				[ <b>${i }</b> ]
 			</c:if>
-			<c:if test="${i != pageNum }">
+			<c:if test="${i != paging.currentPage }">
 				[ <a href="${conPath }/mvcBoard/list.do?pageNum=${i}">${i }</a> ]
 			</c:if>
 		</c:forEach>
-		<c:if test="${endPage < pageCnt }">
-			[ <a href="${conPath }/mvcBoard/list.do?pageNum=${endPage+1}">다음</a> ]
+		<c:if test="${paging.endPage < paging.pageCnt }">
+			[ <a href="${conPath }/mvcBoard/list.do?pageNum=${paging.endPage+1}">다음</a> ]
 		</c:if>
 	</div>
 </body>
