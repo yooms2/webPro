@@ -15,4 +15,5 @@ public class Book {
 	private String binfo;
 	private int startRow;
 	private int endRow;
+	// 검색을 위한 필드
 }
