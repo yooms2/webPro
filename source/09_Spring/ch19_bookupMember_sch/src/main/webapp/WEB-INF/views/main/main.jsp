@@ -22,7 +22,6 @@
 		});
 	</script>
 </head>
-</head>
 <body>
 	<c:if test="${not empty modifyResult }">
 		<script> alert("정보 수정이 완료 되었습니다");</script>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="13" version="2.0">
+<workbench progressCount="14" version="2.0">
 <workbenchAdvisor/>
-<window height="841" width="1360" x="184" y="119">
+<window height="1056" width="976" x="952" y="-8">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -26,36 +26,12 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="dept_emp.exerd" partName="dept_emp.exerd" path="C:/webPro/source/02_DBMS/newProject/dept_emp.exerd" title="dept_emp.exerd" tooltip="newProject/dept_emp.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/dept_emp.exerd"/>
-</editor>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="book.exerd" partName="book.exerd" path="C:/webPro/source/02_DBMS/newProject/book.exerd" title="book.exerd" tooltip="newProject/book.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/book.exerd"/>
-</editor>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="major.exerd" partName="major.exerd" path="C:/webPro/source/02_DBMS/newProject/major.exerd" title="major.exerd" tooltip="newProject/major.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/major.exerd"/>
-</editor>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="member.exerd" partName="member.exerd" path="C:/webPro/source/02_DBMS/newProject/member.exerd" title="member.exerd" tooltip="newProject/member.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/member.exerd"/>
-</editor>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="shopping.exerd" partName="shopping.exerd" path="C:/webPro/source/02_DBMS/newProject/shopping.exerd" title="shopping.exerd" tooltip="newProject/shopping.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/shopping.exerd"/>
-</editor>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="person.exerd" partName="person.exerd" path="C:/webPro/source/02_DBMS/newProject/person.exerd" title="person.exerd" tooltip="newProject/person.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/person.exerd"/>
-</editor>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="supermarket.exerd" partName="supermarket.exerd" path="C:/webPro/source/02_DBMS/newProject/supermarket.exerd" title="supermarket.exerd" tooltip="newProject/supermarket.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/newProject/supermarket.exerd"/>
+<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="bowow.exerd" partName="bowow.exerd" title="bowow.exerd" tooltip="C:\webPro\source\10_2ndProject\bowow\src\main\resources\META-INF\db\bowow.exerd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/webPro/source/10_2ndProject/bowow/src/main/resources/META-INF/db/bowow.exerd"/>
 </editor>
 </editors>
 <views>
@@ -71,11 +47,6 @@
 <element path="/newProject/member.exerd"/>
 </selection>
 </viewState>
-</view>
-<view id="com.tomato.exerd.validate.ui.ValidateView" partName="검토"/>
-<view id="org.eclipse.ui.console.ConsoleView" partName="콘솔"/>
-<view id="com.tomato.exerd.ui.views.domain" partName="도메인">
-<viewState/>
 </view>
 <view id="org.eclipse.gef.ui.palette_view" partName="Palette">
 <viewState/>
@@ -109,9 +80,6 @@
 <new_wizard_action id="com.tomato.exerd.xscript.ui.wizard.NewXScriptWizard"/>
 <view id="org.eclipse.ui.views.ResourceNavigator"/>
 <view id="org.eclipse.gef.ui.palette_view"/>
-<view id="com.tomato.exerd.ui.views.domain"/>
-<view id="com.tomato.exerd.validate.ui.ValidateView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -146,16 +114,12 @@
 </folder>
 </info>
 <info folder="true" part="bottomFolder" ratio="0.7387247" ratioLeft="475" ratioRight="168" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="com.tomato.exerd.ui.views.domain" appearance="2" expanded="2">
-<page content="com.tomato.exerd.ui.views.domain" label="도메인"/>
-<page content="com.tomato.exerd.validate.ui.ValidateView" label="검토"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="콘솔"/>
+<folder appearance="2" expanded="2">
+<page content="com.tomato.exerd.ui.views.domain" label="LabelNotFound"/>
+<page content="com.tomato.exerd.validate.ui.ValidateView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="com.tomato.exerd.xscript.ScriptView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@fb5821" ratio="0.2987616" ratioLeft="193" ratioRight="453" relationship="4" relative="leftFolder">
@@ -173,9 +137,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/dept_emp.exerd"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/BOOK.exerd"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/BOOKC.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/major.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/member.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/book.exerd"/>
@@ -191,57 +152,71 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/major.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/book.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/dept_emp.exerd"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" uri="file:/C:/Users/EZEN%20203/Downloads/bowwow.exerd"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" uri="file:/C:/Users/EZEN%20203/Documents/카카오톡%20받은%20파일/bowwow.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/dept_emp.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/dept_emp.exerd"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" uri="file:/C:/webPro/source/10_2ndProject/bowow/src/main/resources/META-INF/db/bowwow.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/dept_emp.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/book.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/major.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/member.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/shopping.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/person.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/newProject/supermarket.exerd"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" uri="file:/C:/webPro/source/10_2ndProject/bowow/zzz_2nd_teamproject/신치윤/exerd/newProject/230426bowwow.exerd"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" uri="file:/C:/webPro/source/10_2ndProject/bowow/src/main/resources/META-INF/db/bowow.exerd"/>
 </editors>
-<item historyLabel="BOOK.exerd" index="1"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
-<item historyLabel="BOOK.exerd" index="1"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
-<item historyLabel="BOOK.exerd" index="1"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
-<item historyLabel="BOOKC.exerd" index="2"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
-<item historyLabel="BOOKC.exerd" index="2"/>
-<item historyLabel="major.exerd" index="3"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
-<item historyLabel="major.exerd" index="3"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
-<item historyLabel="BOOKC.exerd" index="2"/>
-<item historyLabel="major.exerd" index="3"/>
-<item historyLabel="BOOKC.exerd" index="2"/>
-<item historyLabel="dept_emp.exerd" index="0"/>
-<item historyLabel="BOOKC.exerd" index="2"/>
-<item historyLabel="member.exerd" index="4"/>
-<item historyLabel="major.exerd" index="3"/>
-<item historyLabel="member.exerd" index="4"/>
-<item historyLabel="major.exerd" index="3"/>
-<item historyLabel="member.exerd" index="4"/>
-<item historyLabel="major.exerd" index="3"/>
+<item historyLabel="major.exerd" index="0"/>
+<item historyLabel="book.exerd" index="2"/>
+<item historyLabel="major.exerd" index="0"/>
+<item historyLabel="member.exerd" index="1"/>
+<item historyLabel="major.exerd" index="0"/>
+<item historyLabel="member.exerd" index="1"/>
+<item historyLabel="shopping.exerd" index="3"/>
+<item historyLabel="member.exerd" index="1"/>
+<item historyLabel="major.exerd" index="4"/>
 <item historyLabel="book.exerd" index="5"/>
-<item historyLabel="major.exerd" index="3"/>
-<item historyLabel="member.exerd" index="4"/>
-<item historyLabel="major.exerd" index="3"/>
-<item historyLabel="member.exerd" index="4"/>
-<item historyLabel="shopping.exerd" index="6"/>
-<item historyLabel="member.exerd" index="4"/>
-<item historyLabel="major.exerd" index="7"/>
-<item historyLabel="book.exerd" index="8"/>
-<item historyLabel="dept_emp.exerd" index="9"/>
-<item historyLabel="shopping.exerd" index="6"/>
-<item historyLabel="member.exerd" index="4"/>
-<item historyLabel="shopping.exerd" index="6"/>
-<item historyLabel="member.exerd" index="4"/>
-<item historyLabel="major.exerd" index="7"/>
-<item historyLabel="book.exerd" index="8"/>
-<item historyLabel="dept_emp.exerd" index="9"/>
-<item historyLabel="shopping.exerd" index="6"/>
-<item historyLabel="person.exerd" index="10"/>
-<item historyLabel="supermarket.exerd" index="11"/>
-<item historyLabel="person.exerd" index="12"/>
-<item historyLabel="shopping.exerd" index="13"/>
-<item historyLabel="member.exerd" index="14"/>
-<item historyLabel="major.exerd" index="15"/>
-<item historyLabel="book.exerd" index="16"/>
-<item active="true" historyLabel="dept_emp.exerd" index="17"/>
+<item historyLabel="dept_emp.exerd" index="6"/>
+<item historyLabel="shopping.exerd" index="3"/>
+<item historyLabel="member.exerd" index="1"/>
+<item historyLabel="shopping.exerd" index="3"/>
+<item historyLabel="member.exerd" index="1"/>
+<item historyLabel="major.exerd" index="4"/>
+<item historyLabel="book.exerd" index="5"/>
+<item historyLabel="dept_emp.exerd" index="6"/>
+<item historyLabel="shopping.exerd" index="3"/>
+<item historyLabel="person.exerd" index="7"/>
+<item historyLabel="supermarket.exerd" index="8"/>
+<item historyLabel="person.exerd" index="9"/>
+<item historyLabel="shopping.exerd" index="10"/>
+<item historyLabel="member.exerd" index="11"/>
+<item historyLabel="major.exerd" index="12"/>
+<item historyLabel="book.exerd" index="13"/>
+<item historyLabel="dept_emp.exerd" index="14"/>
+<item historyLabel="bowwow.exerd" index="15"/>
+<item historyLabel="dept_emp.exerd" index="14"/>
+<item historyLabel="bowwow.exerd" index="16"/>
+<item historyLabel="dept_emp.exerd" index="17"/>
+<item historyLabel="bowwow.exerd" index="16"/>
+<item historyLabel="dept_emp.exerd" index="18"/>
+<item historyLabel="bowwow.exerd" index="19"/>
+<item historyLabel="dept_emp.exerd" index="20"/>
+<item historyLabel="book.exerd" index="21"/>
+<item historyLabel="major.exerd" index="22"/>
+<item historyLabel="member.exerd" index="23"/>
+<item historyLabel="shopping.exerd" index="24"/>
+<item historyLabel="person.exerd" index="25"/>
+<item historyLabel="supermarket.exerd" index="26"/>
+<item historyLabel="230426bowwow.exerd" index="27"/>
+<item historyLabel="230426bowwow.exerd" index="27"/>
+<item historyLabel="bowow.exerd" index="28"/>
+<item historyLabel="bowow.exerd" index="28"/>
+<item historyLabel="bowow.exerd" index="28"/>
+<item historyLabel="bowow.exerd" index="28"/>
+<item historyLabel="bowow.exerd" index="28"/>
+<item historyLabel="bowow.exerd" index="28"/>
+<item active="true" historyLabel="bowow.exerd" index="28"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -259,6 +234,21 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="bowow.exerd" tooltip="C:\webPro\source\10_2ndProject\bowow\src\main\resources\META-INF\db\bowow.exerd">
+<persistable uri="file:/C:/webPro/source/10_2ndProject/bowow/src/main/resources/META-INF/db/bowow.exerd"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="230426bowwow.exerd" tooltip="C:\webPro\source\10_2ndProject\bowow\zzz_2nd_teamproject\신치윤\exerd\newProject\230426bowwow.exerd">
+<persistable uri="file:/C:/webPro/source/10_2ndProject/bowow/zzz_2nd_teamproject/신치윤/exerd/newProject/230426bowwow.exerd"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="bowwow.exerd" tooltip="C:\webPro\source\10_2ndProject\bowow\src\main\resources\META-INF\db\bowwow.exerd">
+<persistable uri="file:/C:/webPro/source/10_2ndProject/bowow/src/main/resources/META-INF/db/bowwow.exerd"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="bowwow.exerd" tooltip="C:\Users\EZEN 203\Documents\카카오톡 받은 파일\bowwow.exerd">
+<persistable uri="file:/C:/Users/EZEN%20203/Documents/카카오톡%20받은%20파일/bowwow.exerd"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="bowwow.exerd" tooltip="C:\Users\EZEN 203\Downloads\bowwow.exerd">
+<persistable uri="file:/C:/Users/EZEN%20203/Downloads/bowwow.exerd"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="supermarket.exerd" tooltip="newProject/supermarket.exerd">
 <persistable path="/newProject/supermarket.exerd"/>
 </file>

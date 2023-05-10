@@ -36,11 +36,11 @@
 	</update>
 	<update id="boardReplyPreStep" parameterType="Board">
 		UPDATE MVC_BOARD SET BSTEP = BSTEP + 1
-  			WHERE BGROUP = 2 AND BSTEP > 0
+  			WHERE BGROUP = #{bgroup} AND BSTEP > #{bstep}
 	</update>
 	<insert id="boardReply" parameterType="Board">
 		INSERT INTO MVC_BOARD (BID, BNAME, BTITLE, BCONTENT, BGROUP, BSTEP, BINDENT, BIP)
-		  VALUES (MVC_BOARD_SEQ.NEXTVAL, #{bname},#{btitle}, #{bcontent}, #{bgroup}, #{bstep}+1, #{bindent}+1, #{bip})
+		  VALUES (MVC_BOARD_SEQ.NEXTVAL, #{bname}, #{btitle}, #{bcontent}, #{bgroup}, #{bstep}+1, #{bindent}+1, #{bip})
 	</insert>
 	<update id="boardModify" parameterType="Board">
 		UPDATE MVC_BOARD 

@@ -36,6 +36,7 @@
 			<tr><td colspan="3">
 				<button onclick="location='book.do?method=modify&bnum=${bookDto.bnum}&pageNum=${param.pageNum}'">수정</button>
 				<button onclick="location='book.do?method=list&pageNum=${param.pageNum}'">목록</button>
+			</td></tr>
 		</table>
 	</div>
 	<jsp:include page="../main/footer.jsp"/>
